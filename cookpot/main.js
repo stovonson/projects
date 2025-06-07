@@ -15,16 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const markdownOutput = document.getElementById('markdownOutput');
   const visualOutput = document.getElementById('visualOutput');
 
+  const copyBtn = document.getElementById('copyBtn');
+  const resetBtn = document.getElementById('resetBtn');
+  const previewTabs = document.querySelectorAll('.preview-tab');
 
   let activeTab = 'visual';
-  
+
   initTabSystem();
   updateOutput();
   setupEventListeners();
 
-  const copyBtn = document.getElementById('copyBtn');
-  const resetBtn = document.getElementById('resetBtn');
-  const previewTabs = document.querySelectorAll('.preview-tab');
   function initTabSystem() {
     const savedTab = localStorage.getItem('activeTab');
     if (savedTab) {

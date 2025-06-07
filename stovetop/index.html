@@ -229,30 +229,27 @@
     </a>
   </div>
   <div class="second-header">
-    <div class="support-badges">
-      <a href="https://ko-fi.com/stovonson" class="support-badge">
-        <img src="misc-images/kofi.svg" alt="Support me on Ko-Fi" loading="lazy" style="width: 31px; height: 31px;">
-      </a>
-    </div>
-    <div class="badges">
-      <a href="https://en.wikipedia.org/wiki/HTML">
-        <img src="misc-images/got_html.gif" class="badge" alt="got html?" loading="lazy">
-      </a>
-      <a href="https://en.wikipedia.org/wiki/CSS">
-        <img src="misc-images/css.gif" class="badge" alt="MADE WITH CSS" loading="lazy">
-      </a>
-      <a href="https://en.wikipedia.org/wiki/Bookmark_(digital)">
-        <img src="misc-images/bookmark_this_page.gif" class="badge" alt="Bookmark this Page!" loading="lazy">
-      </a>
-    </div>
     <img src="misc-images/microwave.gif" class="second-header-gif" alt="Microwave on fire" loading="lazy">
   </div>
-  <div class="header">
-    <p>a <a href="https://stovonson.in/">stovonson</a> production.</p>
+  <div class="header" style="margin-bottom: 75px;">
+    <p><a href="https://stovonson.in/">By Stovonson</a> - <a href="https://projects.stovonson.in/">Other Projects</a></p>
   </div>
   <div class="bottom-bg">
     <img src="misc-images/bg_2k.png" alt="Background image">
   </div>
-  <script defer type="text/javascript" src="/main.js"></script>
+  <script type="text/javascript" src="./main.js"></script>
+  <script is:inline>
+    const script = document.createElement('script');
+    script.src = 'https://storage.ko-fi.com/cdn/scripts/overlay-widget.js';
+    script.onload = () => {
+      kofiWidgetOverlay.draw('stovonson', {
+        'type': 'floating-chat',
+        'floating-chat.donateButton.text': 'Support me',
+        'floating-chat.donateButton.background-color': '#f45d22',
+        'floating-chat.donateButton.text-color': '#fff'
+      });
+    };
+    document.body.appendChild(script);
+  </script>
 </body>
 </html>
